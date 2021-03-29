@@ -236,16 +236,16 @@ this.GETAllCitiesBySearchStringAndThatExistsReturns200OkAndNextLetters("LA", "LA
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("GET all cities by search string that does not exist returns 404 (not found)")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("GET all cities with invalid search string returns 400 (bad request)")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "US-AXA-GetCitySearch")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("L1")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("US-CitySearch003")]
-        public virtual void GETAllCitiesBySearchStringThatDoesNotExistReturns404NotFound()
+        public virtual void GETAllCitiesWithInvalidSearchStringReturns400BadRequest()
         {
             string[] tagsOfScenario = new string[] {
                     "L1",
                     "US-CitySearch003"};
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("GET all cities by search string that does not exist returns 404 (not found)", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("GET all cities with invalid search string returns 400 (bad request)", null, new string[] {
                         "L1",
                         "US-CitySearch003"});
 #line 28
@@ -275,9 +275,58 @@ this.FeatureBackground();
  testRunner.Given("I am user \'jamier\' who is a \'insurance Front Office user\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 30
- testRunner.When("I \'GET\' the API \'/api/SmartCitySearch/CitySearch?city=ZE\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I \'GET\' the API \'/api/SmartCitySearch/CitySearch?city=a\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 31
+ testRunner.Then("I receive HTTP status code \'400\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("GET all cities by search string that does not exist returns 404 (not found)")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "US-AXA-GetCitySearch")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("L1")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("US-CitySearch004")]
+        public virtual void GETAllCitiesBySearchStringThatDoesNotExistReturns404NotFound()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "L1",
+                    "US-CitySearch004"};
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("GET all cities by search string that does not exist returns 404 (not found)", null, new string[] {
+                        "L1",
+                        "US-CitySearch004"});
+#line 35
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 6
+this.FeatureBackground();
+#line hidden
+#line 36
+ testRunner.Given("I am user \'jamier\' who is a \'insurance Front Office user\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 37
+ testRunner.When("I \'GET\' the API \'/api/SmartCitySearch/CitySearch?city=ZE\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 38
  testRunner.Then("I receive HTTP status code \'404\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
