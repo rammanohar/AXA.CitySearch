@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30413.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AXA.CitySearch", "AXA.CitySearch\AXA.CitySearch.csproj", "{3C2038D9-4D6B-428B-A64C-152737FC88E3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AXA.CitySearch.Interface", "AXA.CitySearch.Interface\AXA.CitySearch.Interface.csproj", "{DE979794-8CB1-4EAF-8ED8-82386EDD8D03}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AXA.CitySearch.Service", "AXA.CitySearch.Service\AXA.CitySearch.Service.csproj", "{4BF73EE4-E83F-48BF-8FB8-F4E007C6C4DE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AXA.CityData", "AXA.CityData\AXA.CityData.csproj", "{BCAA64DF-794B-4256-B919-A852A18A0D67}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AXA.CitySearch.Tests", "AXA.CitySearch.Tests\AXA.CitySearch.Tests.csproj", "{4DBCA3E9-1B95-40A0-B65F-E1101DE2D9A6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3C2038D9-4D6B-428B-A64C-152737FC88E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C2038D9-4D6B-428B-A64C-152737FC88E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C2038D9-4D6B-428B-A64C-152737FC88E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C2038D9-4D6B-428B-A64C-152737FC88E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE979794-8CB1-4EAF-8ED8-82386EDD8D03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE979794-8CB1-4EAF-8ED8-82386EDD8D03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE979794-8CB1-4EAF-8ED8-82386EDD8D03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE979794-8CB1-4EAF-8ED8-82386EDD8D03}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4BF73EE4-E83F-48BF-8FB8-F4E007C6C4DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BF73EE4-E83F-48BF-8FB8-F4E007C6C4DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BF73EE4-E83F-48BF-8FB8-F4E007C6C4DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BF73EE4-E83F-48BF-8FB8-F4E007C6C4DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCAA64DF-794B-4256-B919-A852A18A0D67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCAA64DF-794B-4256-B919-A852A18A0D67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCAA64DF-794B-4256-B919-A852A18A0D67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCAA64DF-794B-4256-B919-A852A18A0D67}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DBCA3E9-1B95-40A0-B65F-E1101DE2D9A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DBCA3E9-1B95-40A0-B65F-E1101DE2D9A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DBCA3E9-1B95-40A0-B65F-E1101DE2D9A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DBCA3E9-1B95-40A0-B65F-E1101DE2D9A6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {112846E9-0DC9-4CE5-8347-AAF6B62F5C42}
+	EndGlobalSection
+EndGlobal
