@@ -220,6 +220,23 @@ this.GETAllCitiesBySearchStringAndThatExistsReturns200OkAndNextLetters("BANG", "
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("GET all cities by search string and that exists returns 200 (ok) and next letters" +
+            ": BANGALORE")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "US-AXA-GetCitySearch")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("L1")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("US-CitySearch002")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "BANGALORE")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Key Name", "BANGALORE")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Cities", "BANGALORE")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Expected next characters", "")]
+        public virtual void GETAllCitiesBySearchStringAndThatExistsReturns200OkAndNextLetters_BANGALORE()
+        {
+#line 16
+this.GETAllCitiesBySearchStringAndThatExistsReturns200OkAndNextLetters("BANGALORE", "BANGALORE", "", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("GET all cities by search string and that exists returns 200 (ok) and next letters" +
             ": LA")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "US-AXA-GetCitySearch")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("L1")]
@@ -248,7 +265,7 @@ this.GETAllCitiesBySearchStringAndThatExistsReturns200OkAndNextLetters("LA", "LA
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("GET all cities with invalid search string returns 400 (bad request)", null, new string[] {
                         "L1",
                         "US-CitySearch003"});
-#line 28
+#line 29
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -271,13 +288,13 @@ this.ScenarioInitialize(scenarioInfo);
 #line 6
 this.FeatureBackground();
 #line hidden
-#line 29
+#line 30
  testRunner.Given("I am user \'jamier\' who is a \'insurance Front Office user\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 30
+#line 31
  testRunner.When("I \'GET\' the API \'/api/SmartCitySearch/CitySearch?city=a\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 31
+#line 32
  testRunner.Then("I receive HTTP status code \'400\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }

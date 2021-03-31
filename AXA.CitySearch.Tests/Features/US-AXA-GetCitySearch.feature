@@ -20,17 +20,17 @@ Scenario: GET all cities by search string and that exists returns 200 (ok) and n
 	And the response contains '<Cities>' and '<Expected next characters>'
 
 	Examples:
-		| Key Name | Cities                   | Expected next characters |
-		| BANG     | BANGUI;BANGKOK;BANGALORE | U;K;A                    |
-		| LA       | LAGOS;LA PAZ;LA PLATA    | g;<space>                |
+		| Key Name  | Cities                   | Expected next characters |
+		| BANG      | BANGUI;BANGKOK;BANGALORE | U;K;A                    |
+		| BANGALORE | BANGALORE                |                          |
+		| LA        | LAGOS;LA PAZ;LA PLATA    | g;<space>                |
 
 @L1 US-CitySearch003
 Scenario Outline: GET all cities with invalid search string returns 400 (bad request)
 	Given I am user 'jamier' who is a 'insurance Front Office user'
 	When I 'GET' the API '/api/SmartCitySearch/CitySearch?city=a'
 	Then I receive HTTP status code '400'
-	
-	
+
 @L1 US-CitySearch004
 Scenario: GET all cities by search string that does not exist returns 404 (not found)
 	Given I am user 'jamier' who is a 'insurance Front Office user'

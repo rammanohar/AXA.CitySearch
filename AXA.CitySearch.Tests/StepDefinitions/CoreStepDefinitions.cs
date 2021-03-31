@@ -9,6 +9,7 @@ namespace AXA.CitySearch.Tests.StepDefinitions
     using FluentAssertions;
     using System;
     using System.Collections.Generic;
+    using System.Linq;
     using System.Net;
     using System.Net.Http;
     using System.Text;
@@ -90,10 +91,12 @@ namespace AXA.CitySearch.Tests.StepDefinitions
         {
            
             var cityResult = await this.controllerContext.CastResponseAs<CityResult>();
-            var expectedcities = new HashSet<string>(cities.Split(';'));
-            var expectedletters = new HashSet<string>(letters.ToLower().Split(';'));
+            var expectedcities = new HashSet<string>(cities.ToLower().Split(';'));
+            HashSet<string> expectedletters = new HashSet<string>();
+            if (!string.IsNullOrEmpty(letters))
+                expectedletters = new HashSet<string>(letters.ToLower().Split(';'));
 
-            cityResult.NextCities.Should().BeEquivalentTo(expectedcities, options => options.WithStrictOrdering());
+            cityResult.NextCities.Select(c=>c.ToLower()).Should().BeEquivalentTo(expectedcities, options => options.WithStrictOrdering());
             cityResult.NextLetters.Should().BeEquivalentTo(expectedletters, options => options.WithStrictOrdering());
         }
 

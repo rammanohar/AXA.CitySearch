@@ -37,7 +37,7 @@
         public IActionResult CitySearch(string city)
         {
             // Validate searchString
-            if (city.ToCharArray().Count() <= 1)
+            if (city.Length <= 1)
             {
                 return this.BadRequest();
             }

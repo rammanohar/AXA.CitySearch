@@ -28,10 +28,6 @@ namespace AXA.CitySearch.Tests.Context
         }
 
 
-
-
-
-
         /// <summary>
         /// Creates the in memory server and client for controller tests.
         /// </summary>
